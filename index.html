@@ -4,21 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <title>Отправка формы Телеграм</title>
 </head>
 <body>
-    <div class="hc-right">
-                <div class="form-block">
-                    <div class="form-title">Форма отправки Телеграм</div>
-                    <form action="telegram.php" method="post">
-                        <input type="text" name="name" placeholder="Ваше ФИО">
-                        <input type="tel" name="phone" placeholder="Ваш номер" required="">
-                        <input type="text" name="email" placeholder="Ваш E-mail">
-						<button type="submit" class="send-button">Отправить</button>
-					</form>
-                </div>
+    <div class="container">
+        <h2>Форма отправки Телеграм</h2>
+        <form class="form" action="vendor/telegram.php" method="post">
+            <div class="text-field">
+                <label class="text-field__label" for="login">Логин</label>
+                <input class="text-field__input" type="text" name="name" placeholder="ФИО">
             </div>
-        </div>
+            
+            <div class="phone-field">
+                <label class="phone-field__label" for="login">Телефон</label>
+                <input class="phone-field__input" name="phone" placeholder="Ваш номер">
+            </div>
+            
+            <div class="email-field">
+                <label class="email-field__label" for="login">Почта</label>
+                <input class="email-field__input" type="email" name="email" placeholder="Ваша почта">
+            </div>
+            <button type="submit" class="button">Отправить</button>
+        </form>
     </div>
 </body>
 </html>
